@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ICCEM-USGP</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <img src="ICCEM-LOGO.png" class="logo">
+    <div class="header">
+        <a href="#" class="manual">Manual</a>
+        <a href="#" class="btn-login" aria-label="Open modal" onclick="toggleModalOne()">Login</a>
+    </div>
+
+    <div class="body">
+        <p>University Sustainable Greening Project</p>
+        <a href="#" class="btn-login-body" aria-label="Open modal" onclick="toggleModalOne()">Login</a>
+    </div>
+<!--Modal-->
+    <div id="modal-one" class="modal">
+        <div id="content-one" class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title">Login as: </h2>
+            <!-- <button class="close-button" onclick="toggleModalOne()">
+                <span aria-hidden="true" class="line"></span>
+                <span class="sr-only">Close Modal</span>
+            </button> -->
+            
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="toggleModalOne()"> 
+                    <span aria-hidden="true" class="cl">&times;</span>
+                </button>
+            </div>
+            
+			<div class="button">
+            <button type="button" id="btn-student" class="btn-login-as" onclick="location.href='users/student.php'">Student</button>
+			<button type="button" id="btn-admin" class="btn-login-as">Admin</button>
+		</div>
+        </div>
+    </div>
+
+    <script>
+        const modalOne = document.getElementById('modal-one');
+        const modalOneContent = document.getElementById('content-one');
+
+        const toggleModalOne = () => {
+            modalOne.classList.toggle('open');
+            modalOneContent.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

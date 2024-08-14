@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #4a90e2;
+    --bg-color: #f4f7fa;
+    --text-color: #333;
+    --sidebar-bg: #ffffff;
+    --sidebar-hover: #e6f0ff;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-bg);
+    overflow-x: hidden;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    white-space: nowrap;
+}
+.sidebar-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.toggle-btn:hover {
+    color: var(--primary-color);
+}
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+.sidebar a:hover {
+    background-color: var(--sidebar-hover);
+    color: var(--primary-color);
+}
+.sidebar a i {
+    min-width: 30px;
+    font-size: 20px;
+}
+#main {
+    transition: margin-left .3s;
+    padding: 20px;
+    margin-left: 250px;
+}
+.sidebar.closed {
+    width: 70px;
+}
+.sidebar.closed .sidebar-header h3 {
+    display: none;
+}
+.sidebar.closed a span {
+    display: none;
+}
+.sidebar.closed ~ #main {
+    margin-left: 70px;
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    .sidebar .sidebar-header h3 {
+        display: none;
+    }
+    .sidebar a span {
+        display: none;
+    }
+    #main {
+        margin-left: 70px;
+    }
+    .sidebar.open {
+        width: 250px;
+    }
+    .sidebar.open .sidebar-header h3 {
+        display: block;
+    }
+    .sidebar.open a span {
+        display: inline;
+    }
+    .sidebar.open ~ #main {
+        margin-left: 250px;
+    }
+}

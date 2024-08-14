@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <link rel="stylesheet" href="css/sidebar.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+  <div id="mySidebar" class="sidebar">
+          <div class="sidebar-header">
+              <h3>Menu</h3>
+              <button class="toggle-btn" onclick="toggleNav()">
+                  <i class="fas fa-bars"></i>
+              </button>
+          </div>
+          <a href="student-dashboard.php"><i class="fas fa-chart-line"></i> <span>Dashboard</span></a>
+          <a href="#"><i class="fas fa-user"></i> <span>Manage Account</span></a>
+          <a href="logout.php"><i class="fas fa-sign-out"></i> <span id="logout">Logout</span></a>
+        </div>
+
+<script>
+    function toggleNav() {
+        const sidebar = document.getElementById("mySidebar");
+        const main = document.getElementById("main");
+        sidebar.classList.toggle("closed");
+        if (window.innerWidth <= 768) {
+            sidebar.classList.toggle("open");
+        }
+    }
+</script>      
+  </body>

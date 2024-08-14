@@ -1,0 +1,166 @@
+
+.header{
+	float: right;
+	color: white;
+	margin-top: 1rem
+}
+.manual{
+	font-size: 1rem;
+	text-decoration: none;
+	color: white;
+	font-family: Gill Sans MT;
+	font-weight: 700;
+	 padding: .75rem 1rem;
+	background: #399918
+}
+.btn-login{
+    font-size: 1rem;
+    font-family: Gill Sans MT;
+    color: #399918;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    border: #399918 solid;
+    padding: 0.60rem 1.2rem;
+}
+
+.logo{
+	width: 10rem;
+	height: auto;
+}
+
+.body{
+    width: 60%;
+    text-align: center;
+    font-size: 5rem;
+    margin: 25% auto 0 auto;
+    font-family: Aeonik TRIAL;
+}
+.body p {
+	margin-bottom: 0rem;
+}
+.btn-login-body{
+	font-size: 1.6rem;
+	text-decoration: none;
+	color: white;
+	font-family: Gill Sans MT;
+	font-weight: 700;
+	 padding: .75rem 4.5rem;
+	background: #399918
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    transition: all 140ms ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.button{
+	text-align: center;
+    margin-top: 2em;
+}
+.modal-header {
+    margin-top: -2em;
+    background-color: #1A5319;
+    color: white;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    width: 100%;
+    margin-left: -2em;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.modal-content {
+    border-radius: 1em;
+    width: 50%;
+    padding: 2rem;
+    border: none;
+    position: relative;
+    background: #FFFFF0;
+    transform: scale(1.2);
+    transition: all 300ms ease-in-out;
+    font-family: Aeonik TRIAL;
+}
+
+.modal-content.open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.close-button {
+    all: unset;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    position: absolute;
+    
+}
+.close{
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+    cursor: pointer;
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 1em;
+    margin-right: -1em;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.btn-login-as{
+	background-color: #FFA823;
+    border: 0;
+    color: #fff;
+    width: 28rem;
+    padding: 1rem;
+    margin: 1%;
+    font-size: 1.75rem;
+    border-radius: 1.5rem;
+	font-family: Aeonik TRIAL;
+    box-shadow: 0px 2px 2px #616161;
+    cursor: pointer;
+}
